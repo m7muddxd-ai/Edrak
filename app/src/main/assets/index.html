@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>إدراك — تدريب الإدراك البصري المكاني</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF8E7;--card:#fff;--ink:#1E3A3D;--mute:#6A7F82;--teal:#176B73;--gold:#F2B84B;--coral:#E8735A;--soft:#E3F0EE;--ok:#2E9E6B;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14262A;--card:#1E383D;--ink:#F3EBD8;--mute:#9DB3B5;--teal:#59C2C9;--soft:#274348}}
+:root[data-theme="dark"]{--bg:#14262A;--card:#1E383D;--ink:#F3EBD8;--mute:#9DB3B5;--teal:#59C2C9;--soft:#274348}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Tajawal,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+#app{max-width:520px;margin:auto;padding:14px 16px 40px}
+h1{font-size:46px;margin:.1em 0;text-align:center;color:var(--teal);font-weight:800}
+h2{font-size:21px;margin:.5em 0;font-weight:800}
+p{margin:.4em 0}
+.note{color:var(--mute);font-size:15px;text-align:center}
+.card{display:block;width:100%;text-align:right;background:var(--card);border:2px solid transparent;border-radius:18px;padding:16px;margin:10px 0;color:inherit;font:inherit;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+button.card b,.card>b{display:block;font-size:20px;color:var(--teal)}
+.card span,.card small,small{display:block;color:var(--mute);font-size:14px}
+.big{border-top:7px solid var(--teal);padding:22px 16px}.g2{border-top-color:var(--gold)}
+.btn{display:block;width:100%;padding:15px;margin:10px 0;border:0;border-radius:16px;background:#176B73;color:#fff;font:800 18px Tajawal,sans-serif}
+.btn.l{background:var(--soft);color:var(--ink)}.btn.r{background:#C0392B}
+.lk{background:none;border:0;color:var(--teal);font:700 16px Tajawal,sans-serif;padding:8px 0}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.chip{background:var(--gold);color:#3b2a00;border-radius:99px;padding:2px 14px;font-size:14px;font-weight:700}
+.tm{color:var(--mute);font-size:14px;min-width:70px;text-align:left}
+.pg{height:8px;background:var(--soft);border-radius:9px;overflow:hidden}.pg i{display:block;height:100%;background:var(--teal);transition:width .3s}
+.qrow{display:flex;align-items:center;gap:10px;margin:12px 0}.qrow h2{margin:0}
+.sp{flex:none;width:52px;height:52px;border-radius:50%;border:0;background:var(--soft);font-size:24px}
+.vis{background:var(--card);border-radius:22px;padding:12px;text-align:center;margin-bottom:12px;min-height:130px;display:flex;align-items:center;justify-content:center;font-size:66px}
+.vis svg{max-height:180px;width:100%}
+.og{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.o{min-height:84px;border-radius:16px;border:3px solid var(--soft);background:var(--card);color:var(--ink);font:800 20px Tajawal,sans-serif;padding:8px;display:flex;align-items:center;justify-content:center}
+.o svg{width:68px;height:68px}
+.y{border-color:var(--ok)!important;background:#D9F2E4!important;color:#14532d!important}.n{border-color:var(--coral)!important;opacity:.65}
+.fb{min-height:32px;text-align:center;font-weight:800;margin-top:10px;color:var(--teal)}
+.mg{display:grid;gap:8px;direction:ltr}.mc{aspect-ratio:1;border-radius:14px;border:3px solid var(--soft);background:var(--card);font-size:34px}
+.mz{width:100%;background:var(--card);border-radius:16px;margin:6px 0}.mz circle{transition:cx .15s,cy .15s}
+.pad{direction:ltr;display:grid;grid-template-columns:repeat(3,68px);grid-template-areas:". u ." "l . r" ". d .";gap:8px;justify-content:center;margin:12px 0}
+.pad button{width:68px;height:68px;border-radius:50%;border:0;background:var(--gold);color:#3b2a00;font-size:28px}
+.hero{text-align:center;padding-top:24px;animation:pop .7s ease-out}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero{animation:none}}
+.hi{display:flex;align-items:center;gap:10px}
+.pl{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid var(--soft)}
+.pl i{width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-style:normal;text-align:center;font-size:14px;line-height:26px}
+.pl small{margin-inline-start:auto;display:inline}
+.gc{display:flex;gap:14px;align-items:center}.gc .ic{font-size:34px;color:inherit}
+.st{color:var(--gold);letter-spacing:2px;font-size:20px}
+.in{width:100%;padding:13px;margin:6px 0;border-radius:14px;border:2px solid var(--soft);background:var(--card);color:var(--ink);font:700 18px Tajawal,sans-serif}
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}.tl .card{margin:0;text-align:center}.tl b{font-size:26px!important}
+.ch{display:flex;gap:8px;align-items:flex-end;height:150px;padding-top:6px}.ch>div{flex:1;text-align:center;font-size:11px;line-height:1.2;display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+.col{background:var(--teal);border-radius:6px 6px 0 0;margin-bottom:4px}.col.w{background:#D62828}
+.pb{height:8px;background:var(--soft);border-radius:9px;overflow:hidden;margin:4px 0}.pb i{display:block;height:100%;background:var(--teal)}
+.row{display:flex;justify-content:space-between;gap:8px;font-size:15px;padding:4px 0}
+@media print{.np{display:none!important}body{background:#fff;color:#000}.card{box-shadow:none;border:1px solid #bbb}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const $=s=>document.querySelector(s),A=$('#app');
+let db;try{db=JSON.parse(localStorage.getItem('idrak'))}catch(e){}
+db=db||{pin:null,kids:[],att:[],ses:[],pr:{}};
+const save=()=>{try{localStorage.setItem('idrak',JSON.stringify(db))}catch(e){}};
+const G=[{id:'maze',n:'المتاهة',s:'تمييز الاتجاهات',i:'🧭'},{id:'where',n:'فين مكانه؟',s:'العلاقات المكانية',i:'📍'},{id:'shadow',n:'الظل',s:'التمييز البصري',i:'👤'},{id:'mem',n:'الذاكرة',s:'الذاكرة المكانية',i:'🧠'},{id:'fill',n:'أكمل الصورة',s:'الإغلاق البصري',i:'🧩'}];
+const gn=id=>G.find(g=>g.id==id).n,gs=id=>G.find(g=>g.id==id).s;
+let S={},SP=0,DEL=0;
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]),pick=(a,n)=>sh(a).slice(0,n);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const V=h=>{A.innerHTML=h;window.scrollTo(0,0)};
+const nav=(b,x='')=>`<div class="bar np"><button class="lk" onclick="${b}">→ رجوع</button>${x}</div>`;
+const mas=z=>`<svg width="${z}" height="${z}" viewBox="0 0 100 100"><polygon points="50,6 62,36 94,38 69,58 78,90 50,72 22,90 31,58 6,38 38,36" fill="#F4C25B"/><circle cx="41" cy="48" r="3.5" fill="#333"/><circle cx="59" cy="48" r="3.5" fill="#333"/><path d="M40 58Q50 68 60 58" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`;
+const stars=n=>'★'.repeat(n)+'☆'.repeat(3-n);
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ar';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+async function H(p){try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('idrak'+p));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return btoa(p)}}
+const P=(k,g)=>{db.pr=db.pr||{};db.pr[k]=db.pr[k]||{};return db.pr[k][g]=db.pr[k][g]||{u:1,s:0}};
+const st=k=>{const o={};G.forEach(g=>o[g.id]={n:0,ok:0,ms:0});db.att.filter(a=>a.k==k).forEach(a=>{const x=o[a.g];x.n++;x.ok+=a.ok;x.ms+=a.ms});return o};
+const acc=x=>x.n?Math.round(100*x.ok/x.n):null;
+const order=k=>{const s=st(k);return G.map(g=>g.id).sort((a,b)=>(acc(s[a])??-1)-(acc(s[b])??-1))};
+const clr=()=>{clearInterval(S.iv);S.maze=0};
+
+/* ---------- الشاشات الرئيسية ---------- */
+function home(){clr();S={};SP=0;V(`<div class="hero">${mas(120)}<h1>إدراك</h1><p class="note">تدريبات ممتعة للإدراك البصري المكاني</p></div>
+<button class="card big" onclick="kidPick()"><b>أنا طفل</b><span>ألعاب قصيرة وألوان هادئة وصوت يقرأ كل سؤال</span></button>
+<button class="card big g2" onclick="spPin()"><b>أنا أخصائي</b><span>متابعة الأطفال والرسوم البيانية والتوصيات</span></button>
+<p class="note">خمس ألعاب لخمس مهارات. بدون إعلانات وبدون حسابات، والبيانات تُحفظ على هذا الجهاز فقط.</p>`)}
+function kidPick(){clr();SP=0;V(nav('home()')+'<h2>اختر اسمك</h2>'+(db.kids.length?db.kids.map(k=>`<button class="card" onclick="kidHome(${k.id})"><b>${esc(k.name)}</b></button>`).join(''):'<p class="note">لا توجد أسماء بعد. اطلب من الأخصائي إضافة اسمك.</p>'))}
+function kidHome(id){clr();S={kid:id};const k=db.kids.find(x=>x.id==id),pl=order(id);
+V(nav('kidPick()')+`<div class="hi">${mas(54)}<h2>مرحبًا يا ${esc(k.name)}</h2></div>
+<div class="card"><b>ابدأ جلسة جديدة</b><span>15 دقيقة، نبدأ بالمهارات التي تحتاج تدريبًا أكثر</span><button class="btn" onclick="startSession(${id})">ابدأ جلسة جديدة</button></div>
+<div class="card"><b>خطة الجلسة</b>${pl.map((g,i)=>`<div class="pl"><i>${i+1}</i>${gn(g)}<small>${i<2?'تركيز':'تعزيز'}</small></div>`).join('')}</div>
+<h2>أو اختر لعبة</h2>`+G.map(g=>{const p=P(id,g.id);return`<button class="card gc" onclick="startGame1('${g.id}')"><span class="ic">${g.i}</span><div><b>${g.n}</b><small>${g.s}</small><small>المستوى المقترح لك: ${p.u}</small><div class="st">${stars(p.s)}</div></div></button>`}).join(''))}
+
+/* ---------- واجهة الأخصائي ---------- */
+function spPin(){V(nav('home()')+`<h2>${db.pin?'ادخل رمز PIN':'أنشئ رمز PIN'}</h2><p class="note">${db.pin?'':'أربعة أرقام تمنع الطفل من فتح هذه الواجهة. احفظها جيدًا.'}</p><input id="pin" class="in" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="••••"><button class="btn" onclick="pinGo()">${db.pin?'دخول':'حفظ ودخول'}</button><div id="fb" class="fb"></div>`)}
+async function pinGo(){const v=$('#pin').value;if(!/^\d{4}$/.test(v)){$('#fb').textContent='الرمز يتكون من أربعة أرقام';return}const h=await H(v);if(!db.pin){db.pin=h;save()}else if(db.pin!==h){$('#fb').textContent='الرمز غير صحيح. حاول مرة أخرى';return}SP=1;spHome()}
+function spHome(){clr();S={};V(nav('home()')+'<h2>الأطفال</h2>'+db.kids.map(k=>`<button class="card" onclick="spKid(${k.id})"><b>${esc(k.name)}</b><span>${k.age?k.age+' سنوات':'ملف الطفل'}</span></button>`).join('')+`<div class="card"><b>إضافة طفل</b><input id="nm" class="in" maxlength="30" placeholder="الاسم والكنية فقط"><input id="ag" class="in" type="number" min="4" max="12" placeholder="العمر (اختياري)"><button class="btn" onclick="addKid()">إضافة</button></div><p class="note">لا تُدخل أي بيانات حساسة. الأداة تعليمية وليست تشخيصًا طبيًا أو نفسيًا.</p>`)}
+function addKid(){const n=$('#nm').value.trim();if(!n)return;db.kids.push({id:Date.now(),name:n,age:+$('#ag').value||0});save();spHome()}
+function delK(id){if(!DEL){DEL=1;$('#dl').textContent='اضغط مرة أخرى لتأكيد الحذف';return}DEL=0;db.kids=db.kids.filter(k=>k.id!=id);db.att=db.att.filter(a=>a.k!=id);db.ses=db.ses.filter(s=>s.k!=id);delete db.pr[id];save();spHome()}
+function spKid(id){clr();DEL=0;S={kid:id};const k=db.kids.find(x=>x.id==id),s=st(id),t=Object.values(s).reduce((a,x)=>({n:a.n+x.n,ok:a.ok+x.ok}),{n:0,ok:0}),ss=db.ses.filter(x=>x.k==id&&x.ty=='s'),
+w=G.filter(g=>s[g.id].n).sort((a,b)=>acc(s[a.id])-acc(s[b.id]))[0];
+let rec;if(w){const a=acc(s[w.id]);rec=`<b>المهارة الأضعف: ${w.s}</b><p>أقل مهارة نسبيًا (${a}%) خلال ${s[w.id].n} محاولة. ${a>=90?'تدريب خفيف للتعزيز.':'يُنصح بتدريب مركّز.'}</p><p><b>اللعبة المقترحة: ${w.n}</b></p><button class="btn np" onclick="startSession(${id})">ابدأ الجلسة المقترحة</button>`}else rec=`<p>لا توجد نتائج بعد. ابدأ بالتقييم المبدئي لتحديد المهارة الأضعف.</p><button class="btn np" onclick="startSession(${id},1)">ابدأ التقييم المبدئي</button>`;
+V(nav('spHome()',`<button class="lk" onclick="print()">طباعة تقرير PDF</button>`)+`<h2>${esc(k.name)}${k.age?' · '+k.age+' سنوات':''}</h2><p class="note" style="text-align:right">${new Date().toLocaleDateString('ar-EG')}</p>
+<div class="tl"><div class="card"><b>${ss.length}</b><span>الجلسات</span></div><div class="card"><b>${t.n}</b><span>المحاولات</span></div><div class="card"><b>${t.n?Math.round(100*t.ok/t.n)+'%':'-'}</b><span>الدقة الكلية</span></div></div>
+<h2>التوصيات</h2><div class="card">${rec}</div>
+<h2>المهارات</h2><div class="card"><div class="ch">${G.map(g=>{const a=acc(s[g.id]);return`<div><span>${a??'-'}${a!=null?'%':''}</span><div class="col${w&&w.id==g.id?' w':''}" style="height:${a||2}%"></div>${g.s}</div>`}).join('')}</div></div>
+<h2>تقدم الألعاب ومتوسط زمن الاستجابة</h2><div class="card">${G.map(g=>{const p=P(id,g.id),x=s[g.id];return`<div class="row"><span>${g.n}</span><span>${p.s}/3${x.n?' · '+(x.ms/x.n/1000).toFixed(1)+' ث':''}</span></div><div class="pb"><i style="width:${p.s/3*100}%"></i></div>`}).join('')}</div>
+<h2>سجل الجلسات</h2><div class="card">${db.ses.filter(x=>x.k==id).slice(-8).reverse().map(x=>`<div class="row"><span>${new Date(x.t).toLocaleDateString('ar-EG')} · ${x.ty=='a'?'تقييم':'جلسة'}</span><span>${x.n} محاولة · ${x.ac}%</span></div>`).join('')||'<span>لا توجد جلسات بعد</span>'}</div>
+<button class="btn np" onclick="startSession(${id})">ابدأ جلسة</button><button class="btn l np" onclick="startSession(${id},1)">تقييم مبدئي (10 أسئلة)</button><button id="dl" class="btn r np" onclick="delK(${id})">حذف الملف</button>
+<p class="note">مؤشرات للتدريب فقط، وليست تشخيصًا طبيًا أو نفسيًا.</p>`)}
+
+/* ---------- الجلسات والجولات ---------- */
+function startSession(id,as){clr();S={kid:id,mode:as?'a':'s',plan:as?G.map(g=>g.id):order(id),pi:0,t00:Date.now()};if(!as){S.end=Date.now()+9e5;S.iv=setInterval(tick,1000)}startGame(S.plan[0])}
+function startGame1(g){S={kid:S.kid,mode:'g'};startGame(g)}
+function startGame(g){S.g=g;S.l=S.mode=='a'?1:P(S.kid,g).u;S.nq=S.mode=='a'?2:6;S.q=0;S.ok=0;S.bump=0;S.moves=0;g=='maze'?mazeInit():nextQ()}
+function tick(){const e=$('#tm');if(!S.end||!e)return;const r=S.end-Date.now();if(r<=0){S.over=1;e.textContent='انتهى الوقت'}else e.textContent=Math.floor(r/6e4)+':'+String(Math.floor(r/1e3)%60).padStart(2,'0')}
+const hdr=()=>`<div class="bar np"><button class="lk" onclick="ex()">→ رجوع</button><span class="chip">${S.mode=='a'?'تقييم':'المستوى '+S.l}</span><span class="tm" id="tm"></span></div>`;
+function ex(){clr();SP?spKid(S.kid):kidHome(S.kid)}
+const Y=['أحسنت يا بطل!','ممتاز!','شاطر جدًا!'],N=['قريبة! الإجابة الصحيحة ظهرت بالأخضر','محاولة جيدة، كمّل!'];
+function rec(ok){db.att.push({k:S.kid,g:S.g,l:S.l,ok,ms:Date.now()-S.t0,t:Date.now()});S.t0=Date.now();save()}
+function nextQ(){if(S.q>=S.nq)return roundEnd(S.ok/S.nq>=.66);const q=Q[S.g](S.l);S.cur=q;S.t0=Date.now();S.lock=1;S.q++;
+V(hdr()+`<div class="pg"><i style="width:${(S.q-1)/S.nq*100}%"></i></div><div class="qrow"><button class="sp" onclick="say(S.cur.p)" aria-label="اقرأ السؤال">🔊</button><h2>${q.p}</h2></div>`+(q.mem?`<div class="vis">${q.mem.ask}</div><div class="mg" id="mg" style="grid-template-columns:repeat(${q.mem.c},1fr)"></div>`:`<div class="vis">${q.v}</div><div class="og">${q.o.map((o,i)=>`<button class="o" onclick="ans(${i})">${o}</button>`).join('')}</div>`)+'<div id="fb" class="fb"></div>');
+tick();if(q.mem){drawMem(1);setTimeout(()=>{drawMem(0);S.lock=0},q.mem.t)}else S.lock=0;say(q.p)}
+function drawMem(s){const m=S.cur.mem;$('#mg').innerHTML=[...Array(m.r*m.c).keys()].map(i=>`<button class="mc" onclick="ans(${i})">${s?m.it[i]||'':''}</button>`).join('')}
+function ans(i){if(S.lock)return;S.lock=1;const q=S.cur,ok=i===q.c?1:0;rec(ok);S.ok+=ok;if(q.mem&&!ok)drawMem(1);
+document.querySelectorAll(q.mem?'.mc':'.o').forEach((b,j)=>{if(j===q.c)b.classList.add('y');else if(j===i)b.classList.add('n')});
+const m=ok?Y:N;$('#fb').textContent=m[R(0,m.length-1)];setTimeout(nextQ,ok?900:1600)}
+function roundEnd(pass){S.maze=0;const p=P(S.kid,S.g);let up=0;
+if(S.mode!='a'&&pass){p.s=Math.max(p.s,S.l);if(S.l==p.u&&p.u<3){p.u++;up=1}}save();
+const last=S.mode!='g'&&(S.over||S.pi>=S.plan.length-1);
+const info=S.g=='maze'?`وصلت إلى النجمة بعد ${S.moves} خطوة`:`إجاباتك الصحيحة: ${S.ok} من ${S.nq}`;
+V(`<div class="hero">${mas(90)}<h2>${pass?'أحسنت يا بطل!':'محاولة جميلة!'}</h2><p>${gn(S.g)}: ${info}</p><div class="st">${stars(p.s)}</div><p class="note">${up?'فتحت مستوى جديدًا!':pass?'كمّل وستفتح المزيد':'جرّب مرة أخرى وستنجح، أنت تتحسن كل مرة'}</p></div>`+
+(S.mode=='g'?`<button class="btn" onclick="startGame(S.g)">العب مرة أخرى</button><button class="btn l" onclick="ex()">اختر لعبة أخرى</button>`:`<button class="btn" onclick="${last?'sessEnd()':'nxt()'}">${last?'إنهاء الجلسة':'اللعبة التالية'}</button>`))}
+function nxt(){S.pi++;startGame(S.plan[S.pi])}
+function sessEnd(){clearInterval(S.iv);const a=db.att.filter(x=>x.k==S.kid&&x.t>=S.t00),n=a.length,ac=n?Math.round(100*a.reduce((s,x)=>s+x.ok,0)/n):0;db.ses.push({k:S.kid,t:S.t00,ty:S.mode,n,ac});save();
+V(`<div class="hero">${mas(110)}<h2>${S.mode=='a'?'انتهى التقييم':'أحسنت يا بطل!'}</h2><p>${n} محاولة · الدقة ${ac}%</p><p class="note">${S.mode=='a'?'تظهر النتائج في ملف الطفل':'أكملت جلستك، أنت نجم إدراك'}</p></div><button class="btn" onclick="ex()">${SP?'العودة إلى ملف الطفل':'العودة إلى الرئيسية'}</button>`)}
+
+/* ---------- المتاهة ---------- */
+function gen(n){const o=new Set(),v=new Set([0]),k=[0];while(k.length){const c=k[k.length-1],x=c%n,y=(c/n)|0,nb=[[x,y-1],[x+1,y],[x,y+1],[x-1,y]].filter(([a,b])=>a>=0&&b>=0&&a<n&&b<n&&!v.has(b*n+a));if(!nb.length){k.pop();continue}const[a,b]=nb[R(0,nb.length-1)],d=b*n+a;o.add(c+'-'+d);o.add(d+'-'+c);v.add(d);k.push(d)}return o}
+function mazeInit(){const n=S.mode=='a'?3:[0,4,6,8][S.l];S.m={n,o:gen(n),p:0};S.maze=1;S.t0=Date.now();const{o}=S.m,s=300/n;let d='';
+for(let i=0;i<n*n;i++){const x=i%n,y=(i/n)|0;if(x<n-1&&!o.has(i+'-'+(i+1)))d+=`M${(x+1)*s} ${y*s}v${s}`;if(y<n-1&&!o.has(i+'-'+(i+n)))d+=`M${x*s} ${(y+1)*s}h${s}`}
+V(hdr()+`<div class="qrow"><button class="sp" onclick="say('حرّك الشخصية حتى تصل إلى النجمة')" aria-label="اقرأ التعليمات">🔊</button><h2>حرّك الشخصية حتى تصل إلى النجمة</h2></div>
+<svg class="mz" viewBox="-4 -4 308 308"><rect width="300" height="300" fill="none" stroke="var(--teal)" stroke-width="4"/><path d="${d}" stroke="var(--teal)" stroke-width="4" stroke-linecap="round" fill="none"/><text x="${(n-.5)*s}" y="${(n-.5)*s}" font-size="${s*.65}" text-anchor="middle" dominant-baseline="central">⭐</text><circle id="pl" r="${s*.3}" cx="${s/2}" cy="${s/2}" fill="var(--coral)"/></svg>
+<div class="pad"><button style="grid-area:u" onclick="mv('u')" aria-label="أعلى">↑</button><button style="grid-area:l" onclick="mv('l')" aria-label="يسار">←</button><button style="grid-area:r" onclick="mv('r')" aria-label="يمين">→</button><button style="grid-area:d" onclick="mv('d')" aria-label="أسفل">↓</button></div><div id="fb" class="fb"></div>`);tick();say('حرّك الشخصية حتى تصل إلى النجمة')}
+function mv(d){if(!S.maze)return;const{n,o,p}=S.m,x=p%n,y=(p/n)|0,[dx,dy]={u:[0,-1],r:[1,0],d:[0,1],l:[-1,0]}[d],a=x+dx,b=y+dy,q=b*n+a,ok=a>=0&&b>=0&&a<n&&b<n&&o.has(p+'-'+q);rec(ok?1:0);
+if(ok){S.m.p=q;S.moves++;const s=300/n,c=$('#pl');c.setAttribute('cx',(a+.5)*s);c.setAttribute('cy',(b+.5)*s);$('#fb').textContent='';if(q==n*n-1){S.maze=0;const t=S.moves/(S.moves+S.bump);setTimeout(()=>roundEnd(t>=.6),500)}}
+else{S.bump++;$('#fb').textContent='هنا جدار. جرّب طريقًا آخر'}}
+document.addEventListener('keydown',e=>{if(!S.maze)return;const m={ArrowUp:'u',ArrowRight:'r',ArrowDown:'d',ArrowLeft:'l'}[e.key];if(m){e.preventDefault();mv(m)}});
+
+/* ---------- الأسئلة ---------- */
+const car=(x,y)=>`<g transform="translate(${x},${y})"><rect x="-30" y="-8" width="60" height="18" rx="6" fill="#3F6FB5"/><path d="M-16-8L-10-20H10L18-8Z" fill="#3F6FB5"/><circle cx="-18" cy="11" r="6" fill="#333"/><circle cx="18" cy="11" r="6" fill="#333"/><circle cx="-29" cy="-1" r="3" fill="#FFD84D"/></g>`;
+function where(l){const RL=['فوق','تحت','أمام','خلف','بين'],pool=RL.slice(0,[0,3,4,5][l]),c=pool[R(0,pool.length-1)],pos={'فوق':[100,30],'تحت':[100,108],'أمام':[45,70],'خلف':[155,70],'بين':[100,70]}[c];
+return{p:c=='بين'?'أين الكرة بالنسبة للسيارتين؟':'أين الكرة بالنسبة للسيارة؟',v:`<svg viewBox="0 0 200 130">${c=='بين'?car(45,70)+car(155,70):car(100,70)}<circle cx="${pos[0]}" cy="${pos[1]}" r="9" fill="#E8735A"/></svg>`,o:pool,c:pool.indexOf(c)}}
+const SH={L:'20,10 50,10 50,60 85,60 85,90 20,90',F:'20,10 85,30 20,52 20,90 10,90 10,10',A:'10,50 40,15 40,38 90,38 90,62 40,62 40,85',H:'15,50 50,15 85,50 85,90 15,90',S:'50,8 61,38 92,38 67,57 77,88 50,70 23,88 33,57 8,38 39,38'},TF=['','translate(100,0) scale(-1,1)','rotate(90 50 50)','rotate(270 50 50)'];
+const sv=(k,t,f)=>`<svg viewBox="0 0 100 100"><polygon points="${SH[k]}" style="fill:${f}" transform="${t}"/></svg>`;
+function shadow(l){const all=Object.keys(SH),k=l==3?['L','F'][R(0,1)]:l==2?['L','F','A'][R(0,2)]:all[R(0,4)],oth=all.filter(x=>x!=k);let o;
+if(l==1)o=[[k,'']].concat(pick(oth,3).map(x=>[x,'']));else if(l==2)o=[[k,''],...pick(TF.slice(1),2).map(t=>[k,t]),[pick(oth,1)[0],'']];else o=TF.map(t=>[k,t]);
+o=sh(o);return{p:'اختر الظل المطابق للشكل',v:sv(k,'','#E8735A').replace('<svg','<svg style="width:90px"'),o:o.map(x=>sv(x[0],x[1],'var(--ink)')),c:o.findIndex(x=>x[0]==k&&!x[1])}}
+const M=[0,[3,3,2,3000],[3,4,3,2800],[4,4,4,2500]];
+function mem(l){const[r,c,n,t]=M[l],E=['⭐','🔺','🟦','🔴'],cells=pick([...Array(r*c).keys()],n),it={};cells.forEach((x,i)=>it[x]=E[i]);const a=R(0,n-1);return{p:'احفظ أماكن الأشكال ثم اضغط مكان هذا الشكل',mem:{r,c,it,t,ask:E[a]},c:cells[a]}}
+const SC=[
+{st:'<rect x="22" y="52" width="56" height="38" fill="#F2B84B"/>',p:[[50,38,'<path d="M-30 14L0-14L30 14Z" fill="#E8735A"/>',20],[56,71,'<rect x="-6" y="-12" width="12" height="24" rx="2" fill="#8B5E3C"/>',15],[30,66,'<rect x="-7" y="-7" width="14" height="14" fill="#8EC9E8" stroke="#176B73" stroke-width="2"/>',11]]},
+{st:'<ellipse cx="50" cy="92" rx="34" ry="5" fill="#cfe8c8"/>',p:[[50,36,'<circle r="22" fill="#4C9F5E"/>',24],[50,70,'<rect x="-5" y="-16" width="10" height="32" fill="#8B5E3C"/>',18],[60,40,'<circle r="5" fill="#D62828"/>',9]]},
+{st:'<ellipse cx="50" cy="92" rx="34" ry="5" fill="#cfe8c8"/>',p:[[50,28,'<g fill="#E86AA0"><circle cy="-10" r="7"/><circle cx="9" cy="-5" r="7"/><circle cx="9" cy="5" r="7"/><circle cy="10" r="7"/><circle cx="-9" cy="5" r="7"/><circle cx="-9" cy="-5" r="7"/></g><circle r="6" fill="#F2B84B"/>',18],[50,64,'<rect x="-2.5" y="-24" width="5" height="48" fill="#3E8E4F"/>',18],[64,66,'<ellipse rx="11" ry="5" fill="#3E8E4F" transform="rotate(-25)"/>',12]]},
+{st:'<ellipse cx="45" cy="50" rx="28" ry="18" fill="#F59E4B"/>',p:[[80,50,'<path d="M-10 0L14-16V16Z" fill="#E8735A"/>',16],[32,44,'<circle r="4" fill="#fff"/><circle r="2" fill="#222"/>',7],[45,31,'<path d="M-10 8L0-8L10 8Z" fill="#E8735A"/>',13]]}];
+function fill(l){const i=R(0,3),sc=SC[i],pi=R(0,2),[x,y,s,r]=sc.p[pi],oth=[];SC.forEach((z,j)=>{if(j!=i)z.p.forEach(q=>oth.push(q))});const o=sh([sc.p[pi],...pick(oth,[0,2,3,5][l])]);
+const parts=sc.p.map((q,j)=>j==pi?`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="var(--mute)" stroke-width="1.5" stroke-dasharray="3 3"/>`:`<g transform="translate(${q[0]},${q[1]})">${q[2]}</g>`).join('');
+return{p:'اختر القطعة التي تكمل الصورة',v:`<svg viewBox="0 0 100 100" style="max-height:190px">${sc.st}${parts}</svg>`,o:o.map(q=>`<svg viewBox="-32 -32 64 64">${q[2]}</svg>`),c:o.findIndex(q=>q[2]==s)}}
+const Q={where,shadow,mem,fill};
+home();
+</script>
+</body>
+</html>
