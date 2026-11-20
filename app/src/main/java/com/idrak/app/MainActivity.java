@@ -2,9 +2,14 @@ package com.idrak.app;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -13,6 +18,20 @@ import android.webkit.WebViewClient;
 public class MainActivity extends Activity {
 
     private WebView web;
+
+    private class PrintBridge {
+        @JavascriptInterface
+        public void print() {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    PrintManager pm = (PrintManager) getSystemService(Context.PRINT_SERVICE);
+                    PrintDocumentAdapter adapter = web.createPrintDocumentAdapter("Idrak-Report");
+                    pm.print("Idrak-Report", adapter, new PrintAttributes.Builder().build());
+                }
+            });
+        }
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -28,7 +47,14 @@ public class MainActivity extends Activity {
         s.setMediaPlaybackRequiresUserGesture(false);
         s.setAllowFileAccess(true);
 
+        web.addJavascriptInterface(new PrintBridge(), "AndroidPrint");
+
         web.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                view.evaluateJavascript("window.print=function(){AndroidPrint.print();};", null);
+            }
+
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest req) {
                 Uri u = req.getUrl();
